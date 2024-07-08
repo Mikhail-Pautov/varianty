@@ -13,7 +13,7 @@ import Alert from '@mui/material/Alert';
 import { Collapse } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { v4 as uuidv4 } from 'uuid';
-
+import Container from "@mui/material/Container";
 
 
 
@@ -42,26 +42,33 @@ function Header() {
     
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar> 
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 0, mr: 2, pr: 2, borderRight: 1.5}}>
-                        Варианты
-                    </Typography>
-                    
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                        onClick={addСalculator}
-                    >
-                        <CalculateIcon />
-                    </IconButton>
+            
+            <AppBar position="static" >
+                
+                    <Toolbar> 
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 0, mr: 2, pr: 2, borderRight: 1.5}}>
+                            Варианты
+                        </Typography>
+
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}
+                            onClick={addСalculator}
+                        >
+                            <CalculateIcon />
+                        </IconButton>
   
-                </Toolbar>
+                    </Toolbar>
+                
             </AppBar>
-            <Collapse in={checked}><Alert 
+            
+            
+            <Collapse in={checked}>
+            
+            <Alert 
                 severity="info"
                 action={
                     <IconButton
@@ -77,7 +84,10 @@ function Header() {
                     </IconButton>
                   }
                   sx={{ mb: 2 }}
-                >Достигнуто максимальное количество "Вариантов"</Alert></Collapse> 
+                >Достигнуто максимальное количество "Вариантов"</Alert>
+                
+            </Collapse> 
+                
         </Box>
     );
 }

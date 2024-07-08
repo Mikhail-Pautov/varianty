@@ -12,8 +12,9 @@ function App() {
 
     return (
         <>
-            <Header/>
-            <Container maxWidth="xl" >
+            
+            <Container maxWidth="xl" disableGutters={true} sx={{outline: '1px solid red',  px: 0 }}>
+                <Header/>
                 {calcArr.length > 0 ? null : <Welcom/>}
                 <CalcList/>
             </Container>

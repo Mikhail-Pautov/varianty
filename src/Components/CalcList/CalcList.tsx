@@ -26,6 +26,7 @@ export const CalcList = () => {
         <Box
             display="flex" 
             justifyContent="space-around"
+            flexWrap="wrap"
         >
            {calcArr.map((item, index) => <Calculator key={item} index={index} counter={counter[item]} removeCalc={removeCalc}/>)}  
         </Box>
